@@ -336,6 +336,31 @@
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
 
-</body>
+</body><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </html>
+
+<script>
+     $(document).ready(function () {
+          var lastScrollTop = 0;
+          var navbarHeight = $('.navbar').outerHeight();
+
+          $(window).scroll(function (event) {
+               var st = $(this).scrollTop();
+               if (st > lastScrollTop) {
+                    $('.navbar').css('top', -navbarHeight + 'px');
+               } else {
+                    $('.navbar').css('top', '0');
+               }
+               lastScrollTop = st;
+          });
+     });
+</script>
+
+
+<style>
+     .navbar {
+          transition: top 0.3s;
+     }
+</style>

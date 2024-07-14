@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
     color: #353535;
-    font-size: 20px;
+    font-size: 41px;
 }
 
 h2 {
@@ -598,6 +598,18 @@ footer i {
         font-size: 31px;
     }
 
+    .navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 1px 4px;
+    margin-top: 8px;
+    margin-right: 9px;
+    margin-bottom: 4px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
     #home {
         height: 70vh;
     }
@@ -628,6 +640,9 @@ footer i {
 }
 
 @media (max-width: 650px) {
+    .btn{
+            margin-bottom: 24px;
+    }
     h1 {
         font-size: 20px;
     }
@@ -636,16 +651,29 @@ footer i {
         font-size: 20px;
     }
 
-    h5 {
-        font-size: 12px;
+       h5 {
+        font-size: 21px;
     }
 
     .section-btn {
         font-size: 11px;
     }
-
+#service {
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+}
+.footer-quote h4 {
+    font-size: 15px;
+    font-style: italic;
+    margin: 2rem;
+}
+#about, #service, #work, #testimonial, #contact {
+    padding-top: 13px;
+    padding-bottom: 20px;
+}
+   
     #home {
-        height: 95vh;
+        height: 132vh;
     }
 
     #work .col-md-3 {
