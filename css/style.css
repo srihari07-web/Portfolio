@@ -1,0 +1,703 @@
+/*----------------------------------------------------------------
+
+// Table of contents //
+
+        Body
+    0.  Typography
+    1.  Buttons
+    2.  General
+    3.  Preloader
+    4.  Navigation section
+    5.  Home section
+    6.  About section
+    7.  Service section
+    8.  Work section
+    9.  Testimonial section
+    10. Client section
+    11. Contact section
+    12. Footer section
+    13. Social icon
+    14. Mobile Responsive styles
+
+------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,400i');
+
+body {
+    background: #ffffff;
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/*---------------------------------------
+    0 Typography              
+-----------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    line-height: normal;
+}
+
+h1 {
+    color: #353535;
+    font-size: 20px;
+}
+
+h2 {
+    color: #454545;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    color: #505050;
+}
+
+h5 {
+    color: #656565;
+    letter-spacing: 0.5px;
+    font-size: 30px;
+}
+
+p {
+    color: #757575;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/*---------------------------------------
+    1 Buttons               
+-----------------------------------------*/
+
+.btn-success:focus {
+    background-color: #000000;
+    border-color: transparent;
+}
+
+.section-btn {
+    background-color: #f9f9f9;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #000000;
+    letter-spacing: 1.6px;
+    padding: 14px 28px;
+    margin-top: 32px;
+    transition: all ease-in-out 0.4s;
+    text-transform: uppercase;
+}
+
+.section-btn:focus,
+.section-btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/*---------------------------------------
+    2 General               
+-----------------------------------------*/
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #4d638c;
+    transition: 0.5s;
+    text-decoration: none !important;
+}
+
+a:hover, a:active, a:focus {
+    color: #4d638c;
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #252525;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 22px;
+}
+
+#about,
+#service,
+#work,
+#testimonial,
+#contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#service, #testimonial, footer {
+    text-align: center;
+}
+
+/*---------------------------------------
+    3 Preloader section              
+-----------------------------------------*/
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+}
+
+.spinner {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    position: relative;
+}
+
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    border: 1px solid #959595;
+    border-top-color: #ffffff;
+    animation: spinner .9s linear infinite;
+}
+
+@keyframes spinner {
+    to { transform: rotate(360deg); }
+}
+
+/*---------------------------------------
+    4 Navigation section              
+-----------------------------------------*/
+
+.custom-navbar {
+    border: none;
+    margin-bottom: 0;
+    background-color: #ffffff;
+    padding-top: 15px;
+}
+
+.custom-navbar .navbar-brand {
+    color: #656565;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.custom-navbar .nav li a {
+    font-size: 14px;
+    color: #656565;
+    line-height: 40px;
+    padding: 0 22px;
+    transition: all ease-in-out 0.4s;
+}
+
+.custom-navbar .nav li a:hover {
+    background: transparent;
+    color: #353535;
+}
+
+.custom-navbar .navbar-nav > li > a:hover,
+.custom-navbar .navbar-nav > li > a:focus {
+    background-color: transparent;
+}
+
+.custom-navbar .nav li.active > a {
+    background-color: transparent;
+    color: #353535;
+}
+
+.custom-navbar .navbar-toggle {
+    border: none;
+    background-color: transparent;
+}
+
+.custom-navbar .navbar-toggle .icon-bar {
+    background: #353535;
+}
+
+/* Media Queries */
+@media(min-width:768px) {
+    .custom-navbar {
+        border-bottom: 0;
+        background: transparent; 
+    }
+    .custom-navbar.top-nav-collapse {
+        background: #ffffff;
+        box-shadow: 0 40px 100px rgba(0,0,0,.2);
+    }
+}
+
+/*---------------------------------------
+    5 Home section              
+-----------------------------------------*/
+
+#home {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    padding-top: 150px;
+}
+
+/*---------------------------------------
+    6 About section              
+-----------------------------------------*/
+
+.about-text {
+    padding-top: 42px;
+}
+
+.about-text p {
+    padding-top: 6px;
+}
+
+.skill-thumb {
+    padding: 32px 16px 0 0;
+}
+
+.skill-thumb strong {
+    font-weight: normal;
+}
+
+.skill-thumb .progress {
+    background: #ffffff;
+    height: 2px;
+    margin: 5px 0 15px;
+}
+
+.skill-thumb .progress-bar {
+    background: rgb(23 148 57);
+    box-shadow: none;
+}
+
+/*---------------------------------------
+    7 Service section              
+-----------------------------------------*/
+
+#service {
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+#service .service-thumb {
+    padding-top: 22px;
+}
+
+.service-thumb small {
+    color: #656565;
+    font-size: 17px;
+    font-style: italic;
+    display: block;
+    padding: 0 12px;
+}
+
+.service-thumb .fa {
+    border-radius: 100%;
+    font-size: 35px;
+}
+
+/*---------------------------------------
+    8 Work section              
+-----------------------------------------*/
+
+.about-image img,
+.work-thumb img {
+       width: 100%;
+    border: 5px solid #dbdbdb;
+    border-radius: 18px;
+
+}
+
+
+.work-thumb {
+    position: relative;
+    overflow: hidden; /* Prevents overflow from child elements */
+}
+.work-thumb:hover {
+    background: #ffffff;
+    box-shadow: 0px 16px 22px rgba(90, 91, 95, 0.3);
+    top: -5px;
+}
+
+.work-overlay h4,
+.work-overlay h5 {
+    margin: 0;
+}
+
+#work .work-overlay {
+    transition: all ease-in-out 0.4s;
+    position: absolute;
+    bottom: -50px;
+    left: 40px;
+}
+
+
+#work .col-md-3:hover .work-overlay {
+    bottom: 25px;
+}
+
+
+.work-thumb:hover img {
+    filter: blur(4px); /* Blur effect on hover */
+}
+
+
+
+
+/*---------------------------------------
+    9 Testimonial section              
+-----------------------------------------*/
+
+#testimonial .item p {
+    font-size: 19px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.tst-author {
+    margin-top: 32px;
+}
+
+.tst-author .tst-foto {
+    display: inline-block;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    padding: 4px;
+    margin-right: 16px;
+}
+
+.tst-author .tst-foto img {
+    border-radius: 15px;
+}
+
+.tst-author .tst-author-info {
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    top: -28px;
+}
+
+.tst-author .tst-author-info h4 {
+    margin-bottom: 4px;
+}
+
+.tst-author .tst-author-info h5 {
+    letter-spacing: 0.3px;
+    margin-top: 0;
+}
+
+/*---------------------------------------
+   10 Client section              
+-----------------------------------------*/
+
+#client .container {
+    background: #f9f9f9;
+    padding: 102px 82px;
+    min-height: 400px;
+}
+
+#client .fa {
+    font-size: 45px;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+}
+
+#client ul li {
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+    width: 14%;
+    margin: 0 12px;
+}
+
+#client ul li.small-width {
+    width: 10%;
+}
+
+/*---------------------------------------
+    11 Contact section              
+-----------------------------------------*/
+
+.contact-info {
+    padding-top: 22px;
+}
+
+.contact-info h1 {
+    padding-top: 4px;
+}
+
+#contact .text-success,
+#contact .text-danger {
+    display: none;
+}
+
+#contact .form-control {
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.4s;
+}
+
+#contact .form-control:focus {
+    border-color: #d9d9d9;
+}
+
+#contact input {
+    height: 50px;
+}
+
+#contact button#cf-submit {
+    background: #242424;
+    border: none;
+    border-radius: 40px;
+    color: #ffffff;
+    height: 50px;
+    margin-top: 5px;
+}
+
+#contact button#cf-submit:hover {
+    background: #000000;
+}
+
+/*---------------------------------------
+    12 Footer section              
+-----------------------------------------*/
+
+footer {
+    padding: 10px 0 40px 0;
+}
+
+footer i {
+    visibility: hidden;
+    padding: 0 4px;
+}
+
+/*---------------------------------------
+    13 Social Icon             
+-----------------------------------------*/
+
+.social-icon {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+
+.custom-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+}
+
+.custom-list li {
+    position: relative; /* Create a positioning context for the pseudo-element */
+    padding-left: 20px; /* Space for the custom bullet */
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.custom-list li::before {
+    content: '✓'; /* Custom bullet character */
+    position: absolute;
+    left: 0; /* Position it on the left */
+    color: #4CAF50; /* Change color as needed */
+    font-weight: bold; /* Make it bold */
+}
+
+.social-icon li {
+    display: inline-block;
+    list-style: none;
+}
+
+.social-icon li a {
+    border-radius: 100%;
+    color: #999;
+    cursor: pointer;
+    font-size: 24px; /* New font size */
+    text-decoration: none;
+    width: 50px; /* New width */
+    height: 50px; /* New height */
+    line-height: 50px; /* Center the icon */
+}
+
+
+.social-icon li a:hover {
+    background: #f2f2f2;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+/*---------------------------------------
+    14 Mobile Responsive styles              
+-----------------------------------------*/
+
+@media (max-width: 980px) {
+    #home {
+        height: 50vh;
+    }
+
+    #service .service-thumb {
+        padding-bottom: 22px;
+    }
+
+    #work .col-md-3:first-child,
+    #work .col-md-3:nth-of-type(2n+2) {
+        margin-bottom: 65px;
+    }
+
+    #client .container {
+        padding: 82px 62px;
+        min-height: 350px;
+    }
+
+    #client ul li {
+        width: 20%;
+        margin: 0;
+    }
+
+    #client ul li.small-width {
+        width: 15%;
+    }
+
+    #contact-form {
+        padding-top: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 31px;
+    }
+
+    #home {
+        height: 70vh;
+    }
+
+    .custom-navbar {
+        background-color: #ffffff;
+        box-shadow: 0 40px 100px rgba(0,0,0,.2);
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav li a {
+        line-height: 15px;
+    }
+
+    #about .about-image {
+        padding-top: 32px;
+    }
+
+    #work .col-md-3 {
+        margin-bottom: 75px;
+    }
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    .section-btn {
+        font-size: 11px;
+    }
+
+    #home {
+        height: 95vh;
+    }
+
+    #work .col-md-3 {
+        margin-bottom: 80px;
+    }
+
+    #client .container {
+        padding: 42px 22px;
+        min-height: inherit;
+    }
+
+    #client ul li {
+        width: 40%;
+        margin-bottom: 22px;
+    }
+
+    #client ul li.small-width {
+        width: 45%;
+    }
+
+    #client .fa {
+        margin-bottom: 12px;
+    }
+}
+
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+    .skill-thumb {
+        padding: 32px 16px 0 0;
+        position: relative;
+        left: 38rem;
+    }
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 17px;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+.footer-bar {
+    height: 4px; /* Height of the bar */
+    background-color: #4CAF50; /* Color of the bar */
+    margin-top: 20px; /* Margin on top */
+}
+
+.footer-quote {
+    text-align: center; /* Center the quote */
+    padding: 20px 0; /* Add padding */
+    color: #656565; /* Change text color */
+}
+
+.footer-quote h4 {
+    font-size: 18px; /* Font size */
+    font-style: italic; /* Italicize the text */
+}
