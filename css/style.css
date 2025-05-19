@@ -329,9 +329,9 @@ a:hover, a:active, a:focus {
 
 .about-image img,
 .work-thumb img {
-       width: 100%;
-    border: 5px solid #dbdbdb;
-    border-radius: 18px;
+    width: 100%;
+    border: 9px solid #ebebeb;
+    border-radius: 44px;
 
 }
 
